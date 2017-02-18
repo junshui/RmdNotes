@@ -16,3 +16,44 @@ Google recently released TensorFlow v1.0. It supports Windows. However, the inst
 ## conda enviromant
 
 I chose to install TensorFlow in a conda environment. 
+
+I currently installed Anaconda2.4.1 with python 2.7 since I needed python2.7. However, TensorFlow 1.0 only support python 3.5.x. Conda environment provided a perfect solution for this. I ran the follow code to create a conda environment for TensorFlow with python 3.5 installed. 
+
+> conda create -n tensorflow python=3.5
+
+If you want to remove an created enviroment, use the following commmend
+
+> conda remove -n tensorflow --all
+
+After the environment is successfully created, you can activate the enviroment by
+
+> activate tensorflow
+
+deactivate the enviroment by 
+
+> deactivate tensorflow
+
+
+## Install TensorFlow in the conda enviroment
+
+First activate tensorflow enviroment by running the following comment in a windows commandline window. 
+
+> activate tensorflow
+
+At the tensorflow enviroment, use the following code to download and insall the tensorflow.
+
+> (tensorflow) C:> pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.0.0-cp35-cp35m-win_amd64.whl 
+
+Please note that file name is not the same as what listed in Tensorflow website. Its file is tensorflow_gpu-1.0.0-cp35-cp35m-win_x86_64.whl, but it does not work. You need to change it to tensorflow_gpu-1.0.0-cp35-cp35m-win_amd64.whl.
+
+Then you can install other packages in this enviroment using pip in the same way as you usually do. For example, 
+
+> pip install edward
+
+
+## Connect PyCharm IDE with Tensorflow enviroment
+
+It is very simple. When you create a new project, just specify the "interpreter" as the one in the tensorflow enviroment. In our case, it is 
+
+> (python2.7Anaconda2.4.1 Root)\\envs\\tensorflow\\python.exe
+
