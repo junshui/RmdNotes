@@ -1,0 +1,18 @@
+---
+title: "Install TensorFlow 1.0 and Edward on Windows"
+author: "Junshui Ma"
+date: "February 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Google recently released TensorFlow v1.0. It supports Windows. However, the instruction on its website does not directly work. This notes explains how I made it work on my computer. 
+
+## conda enviromant
+
+I chose to install TensorFlow in a conda environment. 
